@@ -174,9 +174,11 @@ npm run dev
 
 ## 👨‍💻 About the Author
 
-**Developer:** [Ixlosbek Erkinov]
+**Developer:** Ixlosbek Erkinov
 
-**GitHub:** [@ix1osbek](https://github.com/ix1osbek)
+**GitHub:** [ix1osbek](https://github.com/ix1osbek)
+
+**Telegram:** [@ix1osbek](https://t.me/ix1osbek)
 
 **Focus:** Node.js developer
 
