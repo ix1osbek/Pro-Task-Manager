@@ -24,5 +24,14 @@ export class TaskService {
     });
   }
 
-  
+  static createTask(title: string, description: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const query = "INSERT INTO tasks (title , description) VALUES (? , ?)";
+
+      db.run(query, [title, description], (err) => {
+        if (err) reject(err);
+        else resolve();
+      });
+    });
+  }
 }
