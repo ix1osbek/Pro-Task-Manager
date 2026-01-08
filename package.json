@@ -2,9 +2,12 @@
   "name": "pro-task-manager",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "frontend": "cd src/renderer && npm run dev",
+    "build:main": "npx tsc",
+    "electron:start": "npm run build:main && export NODE_ENV=development && electron .",
+    "dev": "concurrently \"npm run frontend\" \"wait-on http://localhost:5173 && npm run electron:start\""
   },
   "keywords": [],
   "author": "",
@@ -12,6 +15,12 @@
   "type": "commonjs",
   "dependencies": {
     "electron": "^39.2.7",
+    "lucide-vue-next": "^0.562.0",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.3",
+    "wait-on": "^9.0.3"
   }
 }

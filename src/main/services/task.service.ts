@@ -32,7 +32,7 @@ export class TaskService {
         if (err) reject(err);
         else resolve();
       });
-    });
+    })
   }
 
   static deleteTask(id: number): Promise<void> {

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "outDir": "./dist",       
+    "rootDir": "./src",       
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src/main/**/*", "src/preload.ts"], 
+  "exclude": ["node_modules", "src/renderer"]  
+}
