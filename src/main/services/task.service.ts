@@ -34,4 +34,13 @@ export class TaskService {
       });
     });
   }
+
+  static deleteTask(id: number): Promise<void> {
+    return new Promise((resolve, reject) => {
+      db.run("DELETE FROM tasks WHERE id = ?", [id], (err) => {
+        if (err) reject(err);
+        else resolve();
+      });
+    });
+  }
 }
